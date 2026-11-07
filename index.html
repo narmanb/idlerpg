@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#05070f">
+  <meta name="description" content="Pocket Planet — an idle terraforming game. Turn a barren rock into a living, technological world.">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Pocket Planet</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <header id="resbar" aria-label="Resources"></header>
+    <main id="stage">
+      <canvas id="planet" aria-label="Your planet. Drag to rotate, pinch to zoom."></canvas>
+      <div id="worldTag"></div>
+      <div id="statusRow"></div>
+      <div id="overlayBottom">
+        <button id="claimChip" class="chip-claim hidden" data-action="claimAll"></button>
+        <div id="goalCard"></div>
+        <div id="quickBuy"></div>
+      </div>
+    </main>
+    <section id="panel" class="collapsed" aria-live="polite">
+      <div id="panelHead"></div>
+      <div id="panelBody"></div>
+    </section>
+    <nav id="tabs">
+      <button data-tab="build"><span class="ti">🏗</span><span>Build</span></button>
+      <button data-tab="research"><span class="ti">🔬</span><span>Research</span><i class="badge" id="badge-research"></i></button>
+      <button data-tab="world"><span class="ti">🌍</span><span>World</span><i class="badge" id="badge-world"></i></button>
+      <button data-tab="archive"><span class="ti">✦</span><span>Archive</span><i class="badge" id="badge-archive"></i></button>
+      <button data-tab="stats"><span class="ti">⚙</span><span>More</span></button>
+    </nav>
+    <div id="toasts"></div>
+    <div id="modalWrap" class="hidden"><div id="modal" role="dialog" aria-modal="true"></div></div>
+  </div>
+  <script src="js/util.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/sim.js"></script>
+  <script src="js/planet.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
